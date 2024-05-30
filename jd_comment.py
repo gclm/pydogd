@@ -35,7 +35,7 @@ except:
     from lxml import etree
     import requests
     import urllib.parse
-import jdspider
+import jd_spider
 # constants
 CONFIG_PATH = './config.yml'
 USER_CONFIG_PATH = './config.user.yml'
@@ -113,7 +113,7 @@ def generation(pname, _class=0, _type=1, opts=None):
     for i, item in enumerate(items):
         opts['logger'].debug('Loop: %d / %d', i + 1, loop_times)
         opts['logger'].debug('Current item: %s', item)
-        spider = jdspider.JDSpider(item,ck)
+        spider = jd_spider.JDSpider(item,ck)
         opts['logger'].debug('Successfully created a JDSpider instance')
         # 增加对增值服务的评价鉴别
         if "赠品" in pname or "非实物" in pname or "京服无忧" in pname or "权益" in pname or "非卖品" in pname or "增值服务" in pname:
@@ -646,9 +646,9 @@ if __name__ == '__main__':
     jieba.default_logger.setLevel(level=_logging_level)
     jieba.default_logger.addHandler(console)
     # It's another hack!!!
-    jdspider.default_logger = logging.getLogger('spider')
-    jdspider.default_logger.setLevel(level=_logging_level)
-    jdspider.default_logger.addHandler(console)
+    jd_spider.default_logger = logging.getLogger('spider')
+    jd_spider.default_logger.setLevel(level=_logging_level)
+    jd_spider.default_logger.addHandler(console)
 
     logger.debug('Successfully set up console logger')
     logger.debug('CLI arguments: %s', args)
@@ -664,7 +664,7 @@ if __name__ == '__main__':
         handler.setFormatter(rawformatter)
         logger.addHandler(handler)
         jieba.default_logger.addHandler(handler)
-        jdspider.default_logger.addHandler(handler)
+        jd_spider.default_logger.addHandler(handler)
         logger.debug('Successfully set up file logger')
     logger.debug('Options passed to functions: %s', opts)
     logger.debug('Builtin constants:')
