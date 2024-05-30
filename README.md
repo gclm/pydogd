@@ -2,7 +2,7 @@
 
 ## 拉库指令
 ```shell
-ql repo https://github.com/gclm/pydogd.git "jd_"
+ql repo https://github.com/gclm/pyjd.git "jd_"
 ```
 
 ## 模块

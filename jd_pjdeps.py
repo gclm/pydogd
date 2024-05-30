@@ -2,7 +2,7 @@
 
 '''
 new Env('评价依赖安装');
-8 8 2 10 * https://raw.githubusercontent.com/gclm/pydogd/main/jd_pjdeps.py
+8 8 2 10 * https://raw.githubusercontent.com/gclm/pyjd/main/jd_pjdeps.py
 '''
 
 import os

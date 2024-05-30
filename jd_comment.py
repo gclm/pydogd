@@ -3,7 +3,7 @@
 # 多账号评价，异常处理
 '''
 new Env('自动评价');
-8 8 2 1 * https://raw.githubusercontent.com/gclm/pydogd/main/jd_comment.py
+8 8 2 1 * https://raw.githubusercontent.com/gclm/pyjd/main/jd_comment.py
 '''
 import argparse
 import copy
